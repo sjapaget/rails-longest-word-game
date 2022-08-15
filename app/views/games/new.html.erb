@@ -3,7 +3,9 @@
   <div class="row m-4 d-flex justify-content-evenly">
     <% @letters.each do |letter| %>
       <div class="col-1 btn btn-success">
-        <p class=""><%= letter %></p>
+        <li>
+          <%= letter %>
+        </li>
       </div>
     <% end %>
   </div>

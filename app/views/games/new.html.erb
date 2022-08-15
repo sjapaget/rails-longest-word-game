@@ -1,2 +1,20 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<h1>New game</h1>
+
+  <div class="row m-4 d-flex justify-content-evenly">
+    <% @letters.each do |letter| %>
+      <div class="col-1 btn btn-success">
+        <p class=""><%= letter %></p>
+      </div>
+    <% end %>
+  </div>
+
+<div class="row">
+  <div class="col-12">
+    <form class="d-flex justify-content-evenly" action="/score" method="post" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag 'letters', value=@letters %>
+      <input class="w-75 mx-1" type="text" name="input">
+      <input class="w-25 btn btn-primary" type="submit" value="score">
+    </form>
+  </div>
+</div>

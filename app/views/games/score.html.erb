@@ -1,2 +1,8 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>Result</h1>
+<div class="container">
+<div class="row">
+<p><%= @result %></p>
+<p>You scored <%= @round_score  %> this round, making your overall score <%= @overall_score %></p>
+<%= link_to "Play again", new_path %>
+</div>
+</div>
